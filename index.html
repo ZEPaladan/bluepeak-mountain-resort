@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BluePeak Mountain Resort — Experience Luxury in the Mountains</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       NAVBAR
+  ══════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="images/bluepeak-logo.png" alt="BluePeak Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <span class="logo-fallback">
+          <span class="logo-peak">▲</span>
+          <span class="logo-text">BluePeak</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#rooms" class="nav-link">Rooms</a></li>
+        <li><a href="#facilities" class="nav-link">Facilities</a></li>
+        <li><a href="#testimonials" class="nav-link">Guests</a></li>
+        <li><a href="#booking" class="nav-link nav-book">Book Now</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-media">
+      <img src="images/hero-resort.jpeg" alt="BluePeak Resort" class="hero-bg-img" onerror="this.style.display='none'" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-hero">— Est. 2001, Peak Elevation 2,400m —</div>
+      <h1 class="hero-title reveal-hero">
+        Experience Luxury<br />
+        <em>in the Mountains</em>
+      </h1>
+      <p class="hero-sub reveal-hero">Where alpine grandeur meets world-class hospitality. Escape the ordinary.</p>
+      <div class="hero-actions reveal-hero">
+        <a href="#booking" class="btn btn-gold">Book Your Stay</a>
+        <a href="#about" class="btn btn-outline">Discover More</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hs-num">23</span>
+        <span class="hs-label">Years of Excellence</span>
+      </div>
+      <div class="hs-divider"></div>
+      <div class="hero-stat">
+        <span class="hs-num">48</span>
+        <span class="hs-label">Luxury Suites</span>
+      </div>
+      <div class="hs-divider"></div>
+      <div class="hero-stat">
+        <span class="hs-num">4.9★</span>
+        <span class="hs-label">Guest Rating</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       ABOUT
+  ══════════════════════════════ -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-img-frame">
+            <img src="images/mountain-view.jpeg" alt="Mountain View" class="about-img" onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="about-img-badge">
+              <span class="badge-num">23</span>
+              <span class="badge-text">Years of<br/>Service</span>
+            </div>
+          </div>
+          <div class="about-img-accent"></div>
+        </div>
+        <div class="about-text reveal">
+          <span class="eyebrow">Our Story</span>
+          <h2 class="section-title">A Sanctuary Above the World</h2>
+          <p class="about-body">Nestled at 2,400 metres in the heart of the BluePeak Range, our resort was born from a singular vision: to offer guests an unrivalled communion with nature without sacrificing any comfort. Since opening in 2001, we have welcomed discerning travellers from every corner of the globe.</p>
+          <p class="about-body">Our architecture honours the mountain landscape — raw stone, aged timber, panoramic glass — while interiors speak a language of quiet opulence. Every detail, from the hand-selected linens to the curated cellar, is chosen with intention.</p>
+          <blockquote class="about-mission">
+            <span class="mission-bar"></span>
+            <p>"To create moments of stillness and wonder that guests carry with them long after they descend the mountain."</p>
+          </blockquote>
+          <div class="about-pillars">
+            <div class="pillar">
+              <span class="pillar-icon">🏔️</span>
+              <strong>Alpine Setting</strong>
+              <span>2,400m elevation</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🍃</span>
+              <strong>Eco-Certified</strong>
+              <span>Platinum rated</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar-icon">🌟</span>
+              <strong>Five-Star Service</strong>
+              <span>24/7 concierge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       ROOMS
+  ══════════════════════════════ -->
+  <section id="rooms" class="rooms section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Accommodations</span>
+        <h2 class="section-title">Our Rooms & Suites</h2>
+        <p class="section-sub">Each accommodation is a private world — meticulously designed, impeccably appointed.</p>
+      </div>
+      <div class="rooms-grid">
+
+        <div class="room-card reveal" data-room="Standard Room">
+          <div class="room-img-wrap">
+            <img src="images/standard-room.jpeg" alt="Standard Room" class="room-img" onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="room-img-overlay"></div>
+            <span class="room-tag">Most Popular</span>
+          </div>
+          <div class="room-body">
+            <div class="room-header">
+              <h3>Standard Room</h3>
+              <div class="room-price">
+                <span class="price-from">from</span>
+                <span class="price-num">$180</span>
+                <span class="price-night">/night</span>
+              </div>
+            </div>
+            <ul class="room-features">
+              <li>🛏 King-size bed</li>
+              <li>🏔 Mountain view</li>
+              <li>🛁 En-suite bathroom</li>
+              <li>📶 High-speed WiFi</li>
+            </ul>
+            <button class="btn btn-gold btn-room" data-room="Standard Room" data-price="$180">Book Now</button>
+          </div>
+        </div>
+
+        <div class="room-card reveal room-featured" data-room="Deluxe Room">
+          <div class="room-img-wrap">
+            <img src="images/deluxe-room.jpeg" alt="Deluxe Room" class="room-img" onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="room-img-overlay"></div>
+            <span class="room-tag featured-tag">Staff Pick</span>
+          </div>
+          <div class="room-body">
+            <div class="room-header">
+              <h3>Deluxe Room</h3>
+              <div class="room-price">
+                <span class="price-from">from</span>
+                <span class="price-num">$280</span>
+                <span class="price-night">/night</span>
+              </div>
+            </div>
+            <ul class="room-features">
+              <li>🛏 California king bed</li>
+              <li>🏔 Panoramic balcony</li>
+              <li>🛁 Rain shower & soaking tub</li>
+              <li>🍾 Welcome champagne</li>
+            </ul>
+            <button class="btn btn-gold btn-room" data-room="Deluxe Room" data-price="$280">Book Now</button>
+          </div>
+        </div>
+
+        <div class="room-card reveal" data-room="Suite Room">
+          <div class="room-img-wrap">
+            <img src="images/suite-room.jpeg" alt="Suite Room" class="room-img" onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="room-img-overlay"></div>
+            <span class="room-tag">Ultimate Luxury</span>
+          </div>
+          <div class="room-body">
+            <div class="room-header">
+              <h3>Mountain Suite</h3>
+              <div class="room-price">
+                <span class="price-from">from</span>
+                <span class="price-num">$480</span>
+                <span class="price-night">/night</span>
+              </div>
+            </div>
+            <ul class="room-features">
+              <li>🛏 Two bedrooms</li>
+              <li>🏔 360° peak views</li>
+              <li>🔥 Private fireplace</li>
+              <li>👨‍🍳 In-suite dining</li>
+            </ul>
+            <button class="btn btn-gold btn-room" data-room="Mountain Suite" data-price="$480">Book Now</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FACILITIES
+  ══════════════════════════════ -->
+  <section id="facilities" class="facilities section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">The Resort Experience</span>
+        <h2 class="section-title">World-Class Facilities</h2>
+        <p class="section-sub">Every amenity has been thoughtfully conceived to elevate your stay.</p>
+      </div>
+      <div class="facilities-grid">
+        <div class="facility-card facility-large reveal">
+          <div class="facility-img-wrap">
+            <img src="images/infinity-pool.jpeg" alt="Infinity Pool" class="facility-img" onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="facility-overlay">
+              <h3>Infinity Pool</h3>
+              <p>Float above the clouds in our heated alpine infinity pool with uninterrupted panoramic views.</p>
+              <span class="facility-tag">Open year-round</span>
+            </div>
+          </div>
+        </div>
+        <div class="facility-card reveal">
+          <div class="facility-img-wrap">
+            <img src="images/restaurant-view.jpeg" alt="Fine Dining" class="facility-img" onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="facility-overlay">
+              <h3>Summit Restaurant</h3>
+              <p>Michelin-starred alpine cuisine crafted from locally-sourced, seasonal ingredients.</p>
+              <span class="facility-tag">Reservations recommended</span>
+            </div>
+          </div>
+        </div>
+        <div class="facility-card reveal">
+          <div class="facility-img-wrap">
+            <img src="images/spa-room.jpeg" alt="Spa & Wellness" class="facility-img" onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="facility-overlay">
+              <h3>BluePeak Spa</h3>
+              <p>A sanctuary of rejuvenation — holistic treatments inspired by the healing power of alpine botanicals.</p>
+              <span class="facility-tag">Daily 8am – 10pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════ -->
+  <section id="testimonials" class="testimonials section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Guest Stories</span>
+        <h2 class="section-title">Voices from the Peak</h2>
+      </div>
+      <div class="testimonial-slider reveal">
+        <div class="testimonial-slides" id="testimonialSlides">
+
+          <div class="t-slide active">
+            <div class="t-card">
+              <div class="t-img-wrap">
+                <img src="images/couple-balcony.jpeg" alt="Couple on Balcony" class="t-img" onerror="this.parentElement.classList.add('img-fallback')" />
+              </div>
+              <div class="t-content">
+                <div class="t-stars">★★★★★</div>
+                <blockquote class="t-quote">"BluePeak isn't merely a hotel — it is a state of mind. We watched sunrise paint the peaks gold from our private balcony each morning. A trip we will spend the rest of our lives trying to replicate."</blockquote>
+                <div class="t-author">
+                  <strong>Emma & Thomas Laurent</strong>
+                  <span>Paris, France — Mountain Suite Guests</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-slide">
+            <div class="t-card">
+              <div class="t-img-wrap">
+                <img src="images/happy-guests.jpeg" alt="Happy Guests" class="t-img" onerror="this.parentElement.classList.add('img-fallback')" />
+              </div>
+              <div class="t-content">
+                <div class="t-stars">★★★★★</div>
+                <blockquote class="t-quote">"From the moment the shuttle rounded the final mountain bend and the resort appeared, we knew this was something extraordinary. The staff, the food, the silence — BluePeak redefined what a holiday means to us."</blockquote>
+                <div class="t-author">
+                  <strong>The Nakamura Family</strong>
+                  <span>Tokyo, Japan — Deluxe Room Guests</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-slide">
+            <div class="t-card">
+              <div class="t-img-wrap">
+                <img src="images/couple-balcony.jpeg" alt="Guest" class="t-img" onerror="this.parentElement.classList.add('img-fallback')" />
+              </div>
+              <div class="t-content">
+                <div class="t-stars">★★★★★</div>
+                <blockquote class="t-quote">"I've stayed at luxury properties on six continents. BluePeak stands in a category of its own. The combination of raw natural beauty and flawless service is something no city hotel can replicate. I return every winter."</blockquote>
+                <div class="t-author">
+                  <strong>Robert Ashworth</strong>
+                  <span>New York, USA — Annual Guest since 2015</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="t-controls">
+          <button class="t-btn" id="tPrev">← Previous</button>
+          <div class="t-dots" id="tDots">
+            <span class="t-dot active" data-idx="0"></span>
+            <span class="t-dot" data-idx="1"></span>
+            <span class="t-dot" data-idx="2"></span>
+          </div>
+          <button class="t-btn" id="tNext">Next →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       BOOKING
+  ══════════════════════════════ -->
+  <section id="booking" class="booking section">
+    <div class="container">
+      <div class="booking-grid">
+        <div class="booking-info reveal">
+          <span class="eyebrow">Reserve Your Stay</span>
+          <h2 class="section-title">Begin Your<br /><em>BluePeak Experience</em></h2>
+          <p>Our reservation team is available 24 hours a day to ensure your stay is crafted to perfection. Fill in the form to receive your personalised quote within 2 hours.</p>
+          <div class="booking-perks">
+            <div class="perk">
+              <span>✔</span>
+              <span>Best rate guarantee</span>
+            </div>
+            <div class="perk">
+              <span>✔</span>
+              <span>Free cancellation up to 48h</span>
+            </div>
+            <div class="perk">
+              <span>✔</span>
+              <span>Complimentary airport transfer</span>
+            </div>
+            <div class="perk">
+              <span>✔</span>
+              <span>Exclusive member benefits</span>
+            </div>
+          </div>
+          <div class="booking-contact">
+            <a href="tel:+15551234567" class="contact-pill">📞 +1 (555) 123-4567</a>
+            <a href="mailto:reservations@bluepeak.com" class="contact-pill">✉ reservations@bluepeak.com</a>
+          </div>
+        </div>
+
+        <div class="booking-form-wrap reveal">
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-group">
+              <label for="bName">Full Name *</label>
+              <input type="text" id="bName" placeholder="Your full name" />
+              <span class="ferr" id="errName"></span>
+            </div>
+            <div class="form-group">
+              <label for="bEmail">Email Address *</label>
+              <input type="email" id="bEmail" placeholder="your@email.com" />
+              <span class="ferr" id="errEmail"></span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bCheckin">Check-in Date *</label>
+                <input type="date" id="bCheckin" />
+                <span class="ferr" id="errCheckin"></span>
+              </div>
+              <div class="form-group">
+                <label for="bCheckout">Check-out Date *</label>
+                <input type="date" id="bCheckout" />
+                <span class="ferr" id="errCheckout"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="bRoom">Room Type *</label>
+              <select id="bRoom">
+                <option value="">— Select Room —</option>
+                <option value="standard">Standard Room — from $180/night</option>
+                <option value="deluxe">Deluxe Room — from $280/night</option>
+                <option value="suite">Mountain Suite — from $480/night</option>
+              </select>
+              <span class="ferr" id="errRoom"></span>
+            </div>
+            <div class="form-group">
+              <label for="bGuests">Number of Guests</label>
+              <select id="bGuests">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-gold btn-submit">Request Reservation →</button>
+            <div class="form-success" id="formSuccess">
+              <span class="success-icon">🏔</span>
+              <div>
+                <strong>Reservation Request Received!</strong>
+                <p>Our concierge team will contact you within 2 hours to confirm your stay.</p>
+              </div>
+            </div>
+            <div class="form-error-global" id="formErrorGlobal"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-fallback footer-logo">
+            <span class="logo-peak">▲</span>
+            <span class="logo-text">BluePeak</span>
+          </span>
+          <p>BluePeak Mountain Resort<br />Peak Elevation 2,400m | Est. 2001</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#booking">Book Now</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Services</h4>
+          <ul>
+            <li>Infinity Pool</li>
+            <li>Summit Restaurant</li>
+            <li>BluePeak Spa</li>
+            <li>Ski Concierge</li>
+            <li>Helicopter Transfers</li>
+          </ul>
+        </div>
+        <div class="footer-contact-info">
+          <h4>Contact</h4>
+          <p>📍 1 Summit Drive, BluePeak Range</p>
+          <p>📞 +1 (555) 123-4567</p>
+          <p>✉ reservations@bluepeak.com</p>
+          <p>🕐 Concierge: 24 hours</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 BluePeak Mountain Resort. All rights reserved. Crafted with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <!-- Room Booking Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <span class="modal-eyebrow">Selected Accommodation</span>
+      <h3 class="modal-title" id="modalTitle">Room Name</h3>
+      <p class="modal-price" id="modalPrice">$000/night</p>
+      <p class="modal-msg">Would you like to proceed to booking? We'll take you to our reservation form.</p>
+      <div class="modal-actions">
+        <button class="btn btn-gold" id="modalBook">Proceed to Booking</button>
+        <button class="btn btn-outline-dark" id="modalCancel">Maybe Later</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
