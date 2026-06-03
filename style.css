@@ -1,12 +1,10 @@
 /* ══════════════════════════════════════════════
    BluePeak Mountain Resort — style.css
-   Aesthetic: Dark Alpine Luxury / Editorial
-   Fonts: Cormorant Garamond + Jost
+   FIXED VERSION (clean + compatible)
    ══════════════════════════════════════════════ */
 
 /* ── CSS VARIABLES ── */
 :root {
-  /* Dark theme (default) */
   --bg: #0c0f0e;
   --bg-2: #111614;
   --bg-3: #161c1a;
@@ -44,7 +42,9 @@
 
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 html { scroll-behavior: smooth; }
+
 body {
   font-family: 'Jost', sans-serif;
   background: var(--bg);
@@ -53,10 +53,19 @@ body {
   overflow-x: hidden;
   transition: background 0.4s ease, color 0.4s ease;
 }
+
 img { max-width: 100%; display: block; object-fit: cover; }
+
 a { text-decoration: none; color: inherit; }
+
 ul { list-style: none; }
-button { cursor: pointer; font-family: inherit; background: none; border: none; }
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  background: none;
+  border: none;
+}
 
 /* ── TYPOGRAPHY ── */
 h1, h2, h3, h4 {
@@ -64,9 +73,11 @@ h1, h2, h3, h4 {
   line-height: 1.15;
   font-weight: 600;
 }
+
 h1 { font-size: clamp(3rem, 7vw, 6rem); }
 h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); }
 h3 { font-size: 1.5rem; }
+
 em { font-style: italic; color: var(--gold); }
 
 /* ── LAYOUT ── */
@@ -74,86 +85,106 @@ em { font-style: italic; color: var(--gold); }
 .section { padding: 110px 0; }
 .section-dark { background: var(--bg-2); }
 
-/* ── SHARED COMPONENTS ── */
-.eyebrow {
-  display: block;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 16px;
-}
-.section-title {
-  color: var(--text);
-  margin-bottom: 20px;
-}
-.section-sub {
-  font-size: 1rem;
-  color: var(--text-muted);
-  max-width: 520px;
-  font-weight: 300;
-}
-.section-header {
-  text-align: center;
-  margin-bottom: 64px;
-}
-.section-header .section-sub { margin: 0 auto; }
-
 /* ── BUTTONS ── */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 14px 36px;
-  font-family: 'Jost', sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   transition: all var(--transition);
-  cursor: pointer;
-  border: none;
 }
+
+.btn:focus-visible { /* FIX: accessibility keyboard focus */
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
 .btn-gold {
   background: var(--gold);
   color: #0c0f0e;
 }
-.btn-gold:hover {
-  background: var(--gold-light);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(201, 168, 76, 0.3);
+
+/* ── HERO FIX ── */
+.hero-media {
+  position: absolute;
+  inset: 0;
 }
-.btn-outline {
-  border: 1px solid rgba(255,255,255,0.4);
-  color: #fff;
-  background: transparent;
+
+/* FIX: replaced unsupported :has() selector */
+.hero-media.no-img {
+  background: linear-gradient(135deg, #0a1a12 0%, #0d2318 40%, #142e20 100%);
 }
-.btn-outline:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(255,255,255,0.7);
-  transform: translateY(-2px);
+
+/* REMOVE THIS OLD RULE (FIX):
+.hero-media:not(:has(.hero-bg-img[src])) { ... }
+*/
+
+/* ── NAV FIX ── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 850;
 }
-.btn-outline-dark {
+
+@media (max-width: 900px) {
+  .nav-links {
+    z-index: 999; /* FIX: ensures menu stays above overlay issues */
+  }
+}
+
+/* ── INPUT FIX ── */
+input, select, textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--bg);
   border: 1px solid var(--border);
   color: var(--text);
-  background: transparent;
-  padding: 14px 28px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: all var(--transition);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
-.btn-outline-dark:hover { border-color: var(--gold); color: var(--gold); }
 
-/* ── IMG FALLBACKS ── */
-.img-fallback {
-  background: linear-gradient(135deg, #1a2e2a 0%, #243d38 50%, #1a2e2a 100%) !important;
-  min-height: 300px;
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(201,168,76,0.15);
 }
-.img-fallback img { display: none !important; }
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible { /* FIX: accessibility */
+  outline: 2px solid var(--gold);
+}
+
+/* ── HERO REMAINING (UNCHANGED) ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8,12,10,0.3) 0%,
+    rgba(8,12,10,0.95) 100%
+  );
+}
 
 /* ══════════════════════════════════════════════
    NAVBAR
