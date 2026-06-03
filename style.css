@@ -1046,22 +1046,28 @@ input.err, select.err { border-color: #e05252; }
 }
 @media (max-width: 700px) {
 
-  /* LESS EXTRA SPACE (balanced) */
+@media (max-width: 700px) {
+
   .hero-content {
-    padding-bottom: 180px; /* reduced from 260px */
+    padding-bottom: 80px;
   }
 
   .hero-stats {
     position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
+    margin-top: 28px;
 
-    margin-top: 24px;
-    padding: 16px 20px;
+    transform: none;
+    left: auto;
+    bottom: auto;
 
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+
+    padding: 16px 20px;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-scroll {
